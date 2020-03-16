@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplacePlus", "ReplacePlus.vcxproj", "{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Dynamic Debug|Win32 = Dynamic Debug|Win32
+		Dynamic Release|Win32 = Dynamic Release|Win32
+		Static Debug|Win32 = Static Debug|Win32
+		Static Release|Win32 = Static Release|Win32
+		Unicode Dynamic Debug|Win32 = Unicode Dynamic Debug|Win32
+		Unicode Dynamic Release|Win32 = Unicode Dynamic Release|Win32
+		Unicode Static Debug|Win32 = Unicode Static Debug|Win32
+		Unicode Static Release|Win32 = Unicode Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Dynamic Debug|Win32.ActiveCfg = Dynamic Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Dynamic Debug|Win32.Build.0 = Dynamic Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Dynamic Release|Win32.ActiveCfg = Dynamic Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Dynamic Release|Win32.Build.0 = Dynamic Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Static Debug|Win32.ActiveCfg = Static Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Static Debug|Win32.Build.0 = Static Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Static Release|Win32.ActiveCfg = Static Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Static Release|Win32.Build.0 = Static Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Dynamic Debug|Win32.ActiveCfg = Unicode Dynamic Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Dynamic Debug|Win32.Build.0 = Unicode Dynamic Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Dynamic Release|Win32.ActiveCfg = Unicode Dynamic Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Dynamic Release|Win32.Build.0 = Unicode Dynamic Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Static Debug|Win32.ActiveCfg = Unicode Static Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Static Debug|Win32.Build.0 = Unicode Static Debug|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Static Release|Win32.ActiveCfg = Unicode Static Release|Win32
+		{DBB6E49D-3DF1-4A09-8B5D-BDBA0ADFC43E}.Unicode Static Release|Win32.Build.0 = Unicode Static Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

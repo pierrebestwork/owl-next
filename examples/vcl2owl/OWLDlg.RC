@@ -1,0 +1,28 @@
+/****************************************************************************
+
+
+OWLDlg.RC
+
+produced by Borland Resource Workshop
+
+
+*****************************************************************************/
+
+#include "OWLDlg.rh"
+
+#if !defined(DS_SHELLFONT)
+#define DS_SHELLFONT        (DS_SETFONT | DS_FIXEDSYS)
+#endif
+
+IDD_DIALOG1 DIALOGEX 0, 0, 240, 100
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OWL Dialog"
+FONT 8, "MS Shell Dlg"
+{
+ CONTROL "Edit1", IDC_FIRSTNAMEEDIT, "edit", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 76, 20, 128, 12
+ CONTROL "Edit2", IDC_LASTNAMEEDIT, "edit", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 76, 48, 128, 12
+ CONTROL "Name:", IDC_STATICTEXT1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 12, 24, 40, 8
+ CONTROL "Last name:", IDC_STATICTEXT2, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 12, 52, 60, 8
+ CONTROL "OK", IDOK, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 40, 77, 50, 14
+ CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 140, 77, 50, 14
+}

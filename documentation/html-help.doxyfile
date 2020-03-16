@@ -1,0 +1,12 @@
+# Doxyfile 1.8.7
+
+# This file only overrides a few settings in the following base file. The 
+# overridden settings pertains to generating HTML Help output. Other settings
+# are left unchanged. See the base file for documentation of the options.
+
+@INCLUDE = html.doxyfile
+
+HTML_OUTPUT = html-help
+GENERATE_HTMLHELP = YES
+GENERATE_TREEVIEW = NO
+SEARCHENGINE = NO

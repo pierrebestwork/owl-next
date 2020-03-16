@@ -1,0 +1,51 @@
+//----------------------------------------------------------------------------
+// ObjectWindows - (C) Copyright 1991, 1994 by Borland International
+//   Tutorial application -- step07.rc
+//----------------------------------------------------------------------------
+
+#include <owl/inputdia.rc>
+#include <owl/except.rc>
+
+#define CM_FILENEW    201
+#define CM_FILEOPEN   202
+#define CM_FILESAVE   203
+#define CM_FILESAVEAS 204
+#define CM_ABOUT      205
+
+#define IDD_ABOUT     211
+
+#ifdef RC_INVOKED 
+#ifndef WORKSHOP_INVOKED
+# include <owl/winres.rh>
+#endif
+
+COMMANDS MENU 
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New",     CM_FILENEW
+  MENUITEM "&Open",    CM_FILEOPEN
+  MENUITEM "&Save",    CM_FILESAVE
+  MENUITEM "Save &As", CM_FILESAVEAS
+ }
+ POPUP "&Help"
+ {
+  MENUITEM "&About",   CM_ABOUT
+ }
+}
+
+IDD_ABOUT DIALOGEX 37, 25, 170, 95
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Drawing Pad"
+FONT 8, "MS Shell Dlg"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 60, 73, 50, 14
+ CTEXT "ObjectWindows 5.0 Tutorial Application", -1, 10, 46, 150, 10
+ CTEXT "Copyright 1991, 1996 by Borland International", -1, 10, 57, 150, 8
+ ICON "IDI_TUTORIAL", -1, 78, 11, 14, 16
+ CTEXT "Drawing Pad", -1, 10, 35, 150, 8
+}
+
+IDI_TUTORIAL ICON "bulb.ico"
+
+#endif  // RC_INVOKED

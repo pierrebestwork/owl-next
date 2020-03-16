@@ -1,0 +1,40 @@
+# OWLNext Application Project Description
+
+## Configuration Properties
+
+General | Character Set: Use Multi-Byte Character Set
+VC++ Directories | Include Directories: $(OWLROOT)\include
+VC++ Directories | Library Directories: $(OWLROOT)\lib
+C/C++ | Code Generation | Runtime Library: Multi-threaded/Multi-threaded Debug
+C/C++ | Precompiled Headers | Precompiled Header: Use
+C/C++ | Preprocessor | Preprocessor Definitions: NDEBUG/_DEBUG
+
+Note that the project uses static linking to OWLNext, i.e. _OWLDLL is *not* defined.
+
+## File Descriptions
+
+### "common-controls-6.manifest"
+
+File that activates version 6 of the Common Controls, as to enable Visual Styles (also
+known as "themes"). See MSDN, "Enabling Visual Styles":
+
+http://msdn.microsoft.com/en-gb/library/windows/desktop/bb773175.aspx
+
+### "description.txt"
+
+This description file.
+
+### "main.cpp"
+
+Source file containing the entry point of the application.
+
+### "$(OWLROOT)\include\owl\all.rc"
+
+This file includes all the OWLNext resources. This is only needed for static linking.
+If you use dynamic linking, you should remove this file, since the OWLNext DLL contains
+all the OWLNext resources already.
+
+### "pch.h" and "pch.cpp"
+
+Files for precompiled header use and creation. To use precompilation, include "pch.h" at
+the start of your source files followed by "#pragma hdrstop" (see "main.cpp").

@@ -1,0 +1,99 @@
+//----------------------------------------------------------------------------
+// ObjectWindows - (C) Copyright 1991, 1994 by Borland International
+//   Tutorial application -- step10.rc
+//----------------------------------------------------------------------------
+#include <owl/inputdia.rc>
+#include <owl/mdi.rh>
+#include <owl/except.rc>
+
+#define CM_FILENEW    201
+#define CM_FILEOPEN   202
+#define CM_FILESAVE   203
+#define CM_FILESAVEAS 204
+#define CM_ABOUT      205
+#define CM_PENSIZE    206
+#define CM_PENCOLOR   207
+
+#define IDD_ABOUT     211
+
+#define IDS_FILEINFO  215
+
+#ifdef RC_INVOKED
+#ifndef WORKSHOP_INVOKED
+# include <owl/winres.rh>
+#endif
+
+#include <owl/statusba.rc>
+
+COMMANDS MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New", CM_FILENEW
+  MENUITEM "&Open", CM_FILEOPEN
+  MENUITEM "&Save", CM_FILESAVE
+  MENUITEM "Save &As", CM_FILESAVEAS
+ }
+
+ POPUP "&Tools"
+ {
+  MENUITEM "Pen &Size", CM_PENSIZE
+  MENUITEM "Pen &Color", CM_PENCOLOR
+ }
+
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile", CM_TILECHILDREN
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+
+ POPUP "&Help"
+ {
+  MENUITEM "&About", CM_ABOUT
+ }
+
+}
+
+STRINGTABLE 
+{
+ CM_FILENEW, "Clears the screen for a new drawing"
+ CM_FILEOPEN, "Opens an existing drawing"
+ CM_FILESAVE, "Saves the active drawing"
+ CM_FILESAVEAS, "Saves the active drawing with a new name"
+ CM_PENSIZE, "Changes the pen width"
+ CM_PENCOLOR, "Changes the pen color"
+ CM_ABOUT, "Open an information dialog box"
+ IDS_FILEINFO, "Lines from Step 10"
+}
+
+IDD_ABOUT DIALOGEX 37, 25, 170, 95
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Drawing Pad"
+FONT 8, "MS Shell Dlg"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 60, 73, 50, 14
+ CTEXT "ObjectWindows 5.0 Tutorial Application", -1, 10, 46, 150, 10
+ CTEXT "Copyright 1991, 1994 by Borland International", -1, 10, 57, 150, 8
+ ICON "IDI_TUTORIAL", -1, 78, 11, 14, 16
+ CTEXT "Drawing Pad", -1, 10, 35, 150, 8
+}
+
+IDI_TUTORIAL ICON "bulb.ico"
+
+CM_FILENEW BITMAP LOADONCALL MOVEABLE "filenew.bmp"
+
+CM_FILEOPEN BITMAP LOADONCALL MOVEABLE "fileopen.bmp"
+
+CM_FILESAVE BITMAP LOADONCALL MOVEABLE "filesave.bmp"
+
+CM_FILESAVEAS BITMAP LOADONCALL MOVEABLE "filesvas.bmp"
+
+CM_ABOUT BITMAP "about.bmp"
+
+CM_PENSIZE BITMAP "pensize.bmp"
+
+CM_PENCOLOR BITMAP "pencolor.bmp"
+
+#endif  // RC_INVOKED

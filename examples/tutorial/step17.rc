@@ -1,0 +1,123 @@
+//----------------------------------------------------------------------------
+// ObjectWindows - (C) Copyright 1994 by Borland International
+//   Tutorial application
+//----------------------------------------------------------------------------
+#include <owl/mdi.rh>
+#include <owl/docview.rh>
+
+#define CM_NOEDIT     204
+#define CM_ABOUT      205
+#define CM_PEN        300
+#define CM_SELECT     302
+#define CM_PENSIZE    306
+#define CM_PENCOLOR   307
+#define IDD_ABOUT     211
+#define IDM_MDICMNDS  100
+#define IDM_SDICMNDS  200
+#define IDS_FILEINFO        221
+
+#ifdef RC_INVOKED 
+#ifndef WORKSHOP_INVOKED
+# include <owl/winres.rh>
+# ifdef PURE
+#  undef PURE
+# endif
+#endif
+
+#include <owl/docview.rc>
+#include <owl/except.rc>
+#include <owl/statusba.rc>
+#include <owl/inputdia.rc>
+#include <ocf/oleview.rc>
+
+
+IDM_MDICMNDS MENU
+{
+ POPUP "&File"
+ {
+   MenuItem  "&New",            CM_FILENEW
+   MenuItem  "&Open...",        CM_FILEOPEN
+   MenuItem  "&Save",           CM_FILESAVE
+   MenuItem  "Save &As...",     CM_FILESAVEAS
+   MenuItem  "&Revert To Saved",CM_FILEREVERT
+   MenuItem  "&Close",          CM_FILECLOSE
+   MenuItem  SEPARATOR
+   MenuItem  "E&xit",           CM_EXIT
+ }
+ MENUITEM SEPARATOR
+ MENUITEM SEPARATOR
+ MENUITEM SEPARATOR
+ MENUITEM SEPARATOR
+ POPUP "&Window"
+ {
+  MENUITEM  "&Cascade",       CM_CASCADECHILDREN
+  MENUITEM  "&Tile",          CM_TILECHILDREN
+  MENUITEM  "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM  "C&lose All",     CM_CLOSECHILDREN
+  MENUITEM  "Add &View",      CM_VIEWCREATE
+ }
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&About",   CM_ABOUT
+ }
+}
+
+IDM_SDICMNDS MENU
+{
+ MENUITEM "File",   0,GRAYED  ;placeholder for File menu from DocManager
+ MENUITEM "Edit",   CM_NOEDIT ;placeholder for Edit menu from View
+ POPUP "&Help"
+ {
+  MENUITEM "&About",   CM_ABOUT
+ }
+}
+
+STRINGTABLE
+{
+ CM_ABOUT, "Open an information dialog box"
+ CM_NOEDIT, "No document to edit"
+}
+
+IDD_ABOUT DIALOGEX 37, 25, 170, 95
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Drawing Pad"
+FONT 8, "MS Shell Dlg"
+{
+ DEFPUSHBUTTON "Ok", IDOK, 60, 73, 50, 14
+ CTEXT "ObjectWindows 5.0 Tutorial Application", -1, 10, 46, 150, 10
+ CTEXT "Copyright 1991, 1996 by Borland International", -1, 10, 57, 150, 8
+ ICON "IDI_TUTORIAL", -1, 78, 11, 14, 16
+ CTEXT "Drawing Pad", -1, 10, 35, 150, 8
+}
+
+IDI_TUTORIAL ICON "bulb.ico"
+
+CM_FILENEW BITMAP LOADONCALL MOVEABLE "filenew.bmp"
+CM_FILEOPEN BITMAP LOADONCALL MOVEABLE "fileopen.bmp"
+CM_FILESAVE BITMAP LOADONCALL MOVEABLE "filesave.bmp"
+CM_FILESAVEAS BITMAP LOADONCALL MOVEABLE "filesvas.bmp"
+CM_ABOUT BITMAP "about.bmp"
+CM_PENSIZE BITMAP "pensize.bmp"
+CM_PENCOLOR BITMAP "pencolor.bmp"
+CM_PEN BITMAP "pen.bmp"
+CM_SELECT BITMAP "select.bmp"
+
+STRINGTABLE
+{
+ CM_PEN,        "Selects the pen for drawing on the screen"
+ CM_SELECT,     "Tool for selecting/moving/resizing individual line object"
+ CM_PENSIZE,    "Changes the pen width"
+ CM_PENCOLOR,   "Changes the pen color"
+ CM_EDITUNDO,   "Undo last action"
+ CM_EDITCUT,    "Cut the selected object"
+ CM_EDITCOPY,   "Copy the selected object"
+ CM_EDITPASTE,  "Paste object on the clipboard"
+ CM_EDITDELETE, "Delete selected object"
+ CM_EDITCLEAR,  "Erase all lines"
+ IDS_FILEINFO,  "Lines from Step 17"
+}
+
+
+#endif  // RC_INVOKED
+

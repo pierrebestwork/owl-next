@@ -1,0 +1,27 @@
+//----------------------------------------------------------------------------
+//  Project VCL2OWL
+//----------------------------------------------------------------------------
+//
+//  Copyright © (C) 2007 Sebastian
+//
+//  SUBSYSTEM:    OWLDlg.rc
+//  FILE:         OWLDlg.rh
+//  AUTHOR:       Sebastian Ledesma
+//
+//  OVERVIEW
+//  ~~~~~~~~
+//  Source file for implementation of OWLDlg.
+//
+//----------------------------------------------------------------------------
+
+#if !defined (OWLDlg_rh)
+#define OWLDlg_rh
+
+#define IDD_DIALOG1  101
+
+#define IDC_STATICTEXT1   101
+#define IDC_FIRSTNAMEEDIT 102
+#define IDC_STATICTEXT2   103
+#define IDC_LASTNAMEEDIT  104
+
+#endif
